@@ -1,30 +1,37 @@
-import React from 'react';
-import { View, Text } from 'react-native';
-import { Header, Button, Card, CardSection } from './common';
+import React, { Component } from 'react';
+import { View } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 import Scoreboard from './Scoreboard';
+import { Button, Card, CardSection, Header } from './deprecated';
 
-const MainMenu = (props) => {
-    return (
-        <View>
-            <Header 
-            headerLineOne="HIRAGANA" 
-            headerLineTwo="DRILLER"
-            />
-            <Card>
-                <Scoreboard hiScore={12} />
-                <CardSection>
-                    <Button>PLAY</Button>
-                </CardSection>
-                <CardSection>  
-                    <Button>TRAIN</Button>
-                </CardSection>
-                <CardSection>  
-                    <Button>SETTINGS</Button>
-                    <Button>STUDY</Button>
-                </CardSection>
-            </Card>
-        </View>
-    );
+class MainMenu extends Component {
+    onPlayPress () {
+        Actions.play();
+    }
+    render() {
+        return (
+            <View>
+                <Header headerText="HIRAGNA DRILLER" />
+                <Card>
+                    <CardSection>
+                        <Scoreboard hiScore={12} />
+                    </CardSection>
+                    <CardSection>
+                        <Button
+                            onPress={this.onPlayPress.bind(this)}
+                        >PLAY</Button>
+                    </CardSection>
+                    <CardSection>
+                        <Button>TRAIN</Button>
+                    </CardSection>
+                    <CardSection>
+                        <Button>SETTINGS</Button>
+                        <Button>STUDY</Button>
+                    </CardSection>
+                </Card>
+            </View>
+        );
+    }
 };
 
 export default MainMenu;
