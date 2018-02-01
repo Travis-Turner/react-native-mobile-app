@@ -1,0 +1,3 @@
+rootProject.name = 'hiragana_driller'
+
+include ':app'
