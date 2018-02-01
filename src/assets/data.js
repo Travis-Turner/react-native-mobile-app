@@ -1,79 +1,54 @@
-const data = [
-    {
-        name: 'a',
+const data = {
+    A: {
+        romanization: 'A',
         sound: '',
-        image: ''
+        image: require('./images/A.png')
     },
-    {
-        name: 'i',
+    I: {
+        romanization: 'I',
         sound: '',
-        image: ''
+        image: require('./images/I.png')
     },
-    {
-        name: 'u',
+    U: {
+        romanization: 'U',
         sound: '',
-        image: ''
+        image: require('./images/U.png')
     },
-    {
-        name: 'e',
+    E: {
+        romanization: 'E',
         sound: '',
-        image: ''
+        image: require('./images/E.png')
     },
-    {
-        name: 'o',
+    O: {
+        romanization: 'O',
         sound: '',
-        image: ''
+        image: require('./images/O.png')
     },
-    {
-        name: 'ka',
+    KA: {
+        romanization: 'KA',
         sound: '',
-        image: ''
+        image: require('./images/KA.png')
     },
-    {
-        name: 'ki',
+    KI: {
+        romanization: 'KI',
         sound: '',
-        image: ''
+        image: require('./images/KI.png')
     },
-    {
-        name: 'ku',
+    KU: {
+        romanization: 'KU',
         sound: '',
-        image: ''
+        image: require('./images/KU.png')
+    }, 
+    KE: {
+        romanization: 'KE',
+        sound: '',
+        image: require('./images/KE.png')
     },
-    {
-        name: 'ke',
+    KO: {
+        romanization: 'KO',
         sound: '',
-        image: ''
-    },
-    {
-        name: 'ko',
-        sound: '',
-        image: ''
-    },
-    {
-        name: 'sa',
-        sound: '',
-        image: ''
-    },
-    {
-        name: 'shi',
-        sound: '',
-        image: ''
-    },
-    {
-        name: 'tsu',
-        sound: '',
-        image: ''
-    },
-    {
-        name: 'se',
-        sound: '',
-        image: ''
-    },
-    {
-        name: 'so',
-        sound: '',
-        image: ''
+        image: require('./images/KO.png')
     }
-]
+}
 
 export default data;

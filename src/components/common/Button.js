@@ -24,10 +24,10 @@ const styles = {
   textStyle: {
     alignSelf: 'center',
     color: '#007aff',
-    fontSize: 16,
+    fontSize: 24,
     fontWeight: '600',
-    paddingTop: 10,
-    paddingBottom: 10
+    paddingTop: 20,
+    paddingBottom: 20
   }
 };
 

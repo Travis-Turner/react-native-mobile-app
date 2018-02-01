@@ -6,19 +6,21 @@ import Play from './components/Play';
 const RouterComponent = () => {
     return (
         <Router>
-            <Scene key="root" hideNavBar>
-                <Scene key="menu" hideNavBar duration={0}>
+            <Scene key="root" hideNavBar duration={1}>
+                <Scene key="menu" hideNavBar>
                     <Scene 
                         key="mainMenu"
                         title="mainMenu"
                         component={MainMenu}
+                        duration={1}
                     />
                 </Scene>
-                <Scene key="game" hideNavBar duration={0}>
+                <Scene key="game" hideNavBar>
                     <Scene 
                     key="play"
                     title="play"
                     component={Play}
+                    
                     />
                 </Scene>
             </Scene>
