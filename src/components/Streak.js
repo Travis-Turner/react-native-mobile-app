@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { Button, CardSection } from './common';
 
 const Scoreboard = (props) => {
     return (

@@ -4,6 +4,7 @@ import {
     ADD_STREAK,
     RESET_STREAK
   } from '../actions/types';
+  import { generateRandomArray } from '../assets/scripts/play';
   
   const INITIAL_STATE = {
     targetChar: 'E',
@@ -11,18 +12,6 @@ import {
     randNums: [],
     streak: 0
   }
-  const generateRandomArray = () => {
-    let arr = [];
-    for (i = 0; i < 4; i++){
-      let rand = Math.floor(Math.random() * 4);
-      if (arr.includes(rand)){
-          i--;
-          continue;
-      }
-      arr.push(rand);
-    }
-    return arr;
-  };
   
   export default (state = INITIAL_STATE, action) => {
     switch(action.type){
