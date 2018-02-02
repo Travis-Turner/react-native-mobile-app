@@ -1,27 +1,30 @@
 import {
    TARGET_UPDATE,
-   CHOICES_UPDATE
+   CHOICES_UPDATE,
+   ADD_STREAK,
+   RESET_STREAK
 } from './types';
 
-const generateCard = () => {
-    const selectedRange = ['A', 'I', 'U', 'E', 'O', 'KA', 'KI', 'KU', 'KE', 'KO'];
-    let rand = Math.floor(Math.random() * selectedRange.length);
-    return selectedRange[rand];
-}
+
 const generateChoices = () => {
     let choices = [];
     const selectedRange = ['A', 'I', 'U', 'E', 'O', 'KA', 'KI', 'KU', 'KE', 'KO'];
     for (i = 0; i < 4; i++){
         let rand = Math.floor(Math.random() * selectedRange.length);
-        choices.push(selectedRange[rand]);
+        let newChoice = selectedRange[rand];
+        if (choices.includes(newChoice)){
+            i--;
+            continue;
+        }
+        choices.push(newChoice);
     }
     return choices;
 };
   
-export const targetUpdate = () => {
+export const targetUpdate = (target) => {
     return {
         type: TARGET_UPDATE,
-        payload: generateCard()
+        payload: target
     }
 };
 
@@ -29,5 +32,17 @@ export const choicesUpdate = () => {
     return {
         type: CHOICES_UPDATE,
         payload: generateChoices()
+    }
+}
+
+export const addStreak = () => {
+    return {
+        type: ADD_STREAK
+    }
+}
+
+export const resetStreak = () => {
+    return {
+        type: RESET_STREAK
     }
 }

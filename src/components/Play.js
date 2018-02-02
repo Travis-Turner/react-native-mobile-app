@@ -15,20 +15,17 @@ class Play extends Component {
     onQuit () {
         Actions.mainMenu();
     }
-    handleChoice() {
-        this.props.choicesUpdate();
-    }
     render() {
         return (
             <FadeInView>
-                <Streak score={12} onQuit={this.onQuit} />
+                <Streak score={this.props.streak} onQuit={this.onQuit} />
                 <ImageCard targetChar={this.props.choices[0]} />
                 <ChoiceCard 
                     choice1={this.props.choices[0]}
                     choice2={this.props.choices[1]}
                     choice3={this.props.choices[2]}
                     choice4={this.props.choices[3]}
-                    handleChoice={this.handleChoice.bind(this)}
+                    targetChar={this.props.choices[0]}
                 />
             </FadeInView>
         )
@@ -38,7 +35,8 @@ class Play extends Component {
 const mapStateToProps = (state) => {
     return {
         targetChar: state.game.targetChar,
-        choices: state.game.choices       
+        choices: state.game.choices,
+        streak: state.game.streak       
     }
 };
 

@@ -10,7 +10,6 @@ class MainMenu extends Component {
     componentWillMount() {
         this.props.targetUpdate();
         this.props.choicesUpdate();
-        alert(this.props.choices);
     }
     onPlayPress () {
         Actions.play();
