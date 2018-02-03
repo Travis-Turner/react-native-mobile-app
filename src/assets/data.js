@@ -48,7 +48,58 @@ const data = {
         romanization: 'KO',
         sound: '',
         image: require('./images/KO.png')
+    },
+    SA: {
+        romanization: 'SA',
+        sound: '',
+        image: require('./images/SA.png')
+    },
+    SHI: {
+        romanization: 'SHI',
+        sound: '',
+        image: require('./images/SHI.png')
+    },
+    SU: {
+        romanization: 'SU',
+        sound: '',
+        image: require('./images/SU.png')
+    },
+    SE: {
+        romanization: 'SE',
+        sound: '',
+        image: require('./images/SE.png')
+    },
+    SO: {
+        romanization: 'SO',
+        sound: '',
+        image: require('./images/SO.png')
+    },
+    TA: {
+        romanization: 'TA',
+        sound: '',
+        image: require('./images/TA.png')
+    },
+    CHI: {
+        romanization: 'CHI',
+        sound: '',
+        image: require('./images/CHI.png')
+    },
+    TSU: {
+        romanization: 'TSU',
+        sound: '',
+        image: require('./images/TSU.png')
+    },
+    TE: {
+        romanization: 'TE',
+        sound: '',
+        image: require('./images/TE.png')
+    }, 
+    TO: {
+        romanization: 'TO',
+        sound: '',
+        image: require('./images/TO.png')
     }
+
 }
 
 export default data;
