@@ -34,7 +34,7 @@ class MainMenu extends Component {
                         <Button>TRAIN</Button>
                     </CardSection>
                     <CardSection>
-                        <Button>SETTINGS</Button>
+                        <Button style={{height: 100, width: 100}}>SETTINGS</Button>
                         <Button>STUDY</Button>
                     </CardSection>
                 </Card>

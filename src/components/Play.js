@@ -6,7 +6,7 @@ import Streak from './Streak';
 import ImageCard from './ImageCard';
 import ChoiceCard from './ChoiceCard';
 import { FadeInView } from './common';
-import { targetUpdate, choicesUpdate } from '../actions/gameActions'; 
+import { targetUpdate, choicesUpdate, resetStreak } from '../actions/gameActions'; 
 
 class Play extends Component {
     componentWillMount() {
@@ -14,6 +14,7 @@ class Play extends Component {
     }
     onQuit () {
         Actions.mainMenu();
+        resetStreak();
     }
     render() {
         return (
@@ -41,4 +42,4 @@ const mapStateToProps = (state) => {
 };
 
 
-export default connect(mapStateToProps, { targetUpdate, choicesUpdate })(Play);
+export default connect(mapStateToProps, { targetUpdate, choicesUpdate, resetStreak })(Play);
