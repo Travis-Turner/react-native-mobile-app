@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { View, Text, TouchableOpacity, StyleSheet, Modal } from 'react-native';
+import { View, Text, StyleSheet, Modal } from 'react-native';
 import { choicesUpdate, addStreak, resetStreak } from '../actions/gameActions';
 import data from '../assets/data';
 import s from '../styles/ChoiceCard';
 import { CardSection, Card, Button } from './common/index';
+import Choice from './Choice';
 import VicModal from './VicModal';
 
 class ChoiceCard extends Component {
@@ -56,21 +57,28 @@ class ChoiceCard extends Component {
     return (
         <View style={mainContainer}>
             <View style={row}>
-                <TouchableOpacity style={textContainer} onPress={() => {this.handleChoice(testObj[0]);}}>
-                    <Text style={text}>{testObj[0]}</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={textContainer} onPress={() => {this.handleChoice(testObj[1]);}}>
-                    <Text style={text}>{testObj[1]}</Text>
-                </TouchableOpacity>
+                <Choice 
+                    handleChoice={this.handleChoice}
+                    index={0}
+                    testObj={testObj}
+                />
+                <Choice 
+                    handleChoice={this.handleChoice}
+                    index={1}
+                    testObj={testObj}
+                 />
             </View>
-
             <View style={row}>
-                <TouchableOpacity style={textContainer} onPress={() => {this.handleChoice(testObj[2]);}}>
-                    <Text style={text}>{testObj[2]}</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={textContainer} onPress={() => {this.handleChoice(testObj[3]);}}>
-                    <Text style={text}>{testObj[3]}</Text>
-                </TouchableOpacity>
+                <Choice 
+                    handleChoice={this.handleChoice}
+                    index={2}
+                    testObj={testObj}
+                />
+                <Choice 
+                    handleChoice={this.handleChoice}
+                    index={3}
+                    testObj={testObj}
+                />
             </View>
             <Modal
             visible={this.state.modalVisible}
