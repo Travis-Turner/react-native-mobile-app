@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { View, Text, StyleSheet, Modal } from 'react-native';
+import { View, Modal } from 'react-native';
 import { choicesUpdate, addStreak, resetStreak } from '../actions/gameActions';
 import data from '../assets/data';
 import s from '../styles/ChoiceCard';
-import { CardSection, Card, Button } from './common/index';
 import Choice from './Choice';
 import VicModal from './VicModal';
+let Sound = require('react-native-sound');
+var success = new Sound('hd_success.mp3', Sound.MAIN_BUNDLE, (error) => {
+    if (error) {
+      console.log('failed to load the sound', error);
+      return;
+    }
+    console.log('duration in seconds: ' + success.getDuration() + 'number of channels: ' + success.getNumberOfChannels());
+  });
 
 class ChoiceCard extends Component {
     constructor(props){
@@ -18,9 +25,10 @@ class ChoiceCard extends Component {
         this.closeModal = this.closeModal.bind(this);
     }
     handleChoice(text) {
-        if (text === this.props.targetChar){
+        if (text === this.props.targetChar){ 
             this.props.addStreak();
             this.props.choicesUpdate();
+            success.play();
             return;
         }
         //Game over condition
@@ -33,12 +41,6 @@ class ChoiceCard extends Component {
         this.props.resetStreak();
       }
     render () {
-    const { 
-        text, 
-        row, 
-        textContainer,
-        mainContainer
-    } = s;
     //This code depends heavily on a number of random variables.
     //Arrays and objects are being accessed by randomly generated integers.
     //The follow two objects help make neater references based on those random variables.
@@ -55,8 +57,8 @@ class ChoiceCard extends Component {
         3: data[choiceObj[this.props.randArr[3]]].romanization
     }   
     return (
-        <View style={mainContainer}>
-            <View style={row}>
+        <View style={s.mainContainer}>
+            <View style={s.row}>
                 <Choice 
                     handleChoice={this.handleChoice}
                     index={0}
@@ -68,7 +70,7 @@ class ChoiceCard extends Component {
                     testObj={testObj}
                  />
             </View>
-            <View style={row}>
+            <View style={s.row}>
                 <Choice 
                     handleChoice={this.handleChoice}
                     index={2}
