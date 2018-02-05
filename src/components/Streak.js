@@ -1,32 +1,44 @@
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import React, { Component } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, Animated, Dimensions } from 'react-native';
+const { width, height } = Dimensions.get('window');
+const aspectRatio = height/width;
 
-const Scoreboard = (props) => {
-    return (
-        <View style={styles.container}>
-            <Text style={styles.streak}>STREAK: {props.score}</Text>
-            <TouchableOpacity  
-                style={styles.button}
-                onPress={props.onQuit}
-            >
-                <Text style={styles.text}>QUIT</Text>
-            </TouchableOpacity>
-        </View>
-    );
+class Scoreboard extends Component {
+    constructor(props){
+        super(props);
+    }
+    render() {
+        return (
+            <View style={styles.container}>
+                <View style={styles.scoreContainer}>
+                    <Text style={styles.streak}>STREAK: {this.props.score}</Text>
+                </View>
+                <TouchableOpacity  
+                    style={styles.button}
+                    onPress={this.props.onQuit}
+                >
+                    <Text style={styles.text}>QUIT</Text>
+                </TouchableOpacity>
+            </View>
+        );
+    } 
 };
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: 40,
+        marginTop: aspectRatio < 1.6 ? 10 : 40,
         alignItems: 'center',
         flexDirection: 'row',
         justifyContent: 'space-around'
+    },
+    scoreContainer: {
+        flexDirection: 'row'
     },
     text: {
         fontSize: 18
     },
     streak: {
-        fontSize: 30
+        fontSize: aspectRatio < 1.6 ? 18 : 30
     },
     button: {
         padding: 15,

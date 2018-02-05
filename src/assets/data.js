@@ -98,8 +98,137 @@ const data = {
         romanization: 'TO',
         sound: '',
         image: require('./images/TO.png')
+    },
+    NA: {
+        romanization: 'NA',
+        sound: '',
+        image: require('./images/NA.png')
+    },
+    NI: {
+        romanization: 'NI',
+        sound: '',
+        image: require('./images/NI.png')
+    },
+    NU: {
+        romanization: 'NU',
+        sound: '',
+        image: require('./images/NU.png')
+    },
+    NE: {
+        romanization: 'NE',
+        sound: '',
+        image: require('./images/NE.png')
+    },
+    NO: {
+        romanization: 'NO',
+        sound: '',
+        image: require('./images/NO.png')
+    },
+    HA: {
+        romanization: 'HA',
+        sound: '',
+        image: require('./images/HA.png')
+    },
+    HI: {
+        romanization: 'HI',
+        sound: '',
+        image: require('./images/HI.png')
+    },
+    FU: {
+        romanization: 'FU',
+        sound: '',
+        image: require('./images/FU.png')
+    },
+    HE: {
+        romanization: 'HE',
+        sound: '',
+        image: require('./images/HE.png')
+    },
+    HO: {
+        romanization: 'HO',
+        sound: '',
+        image: require('./images/HO.png')
+    },
+    MA: {
+        romanization: 'MA',
+        sound: '',
+        image: require('./images/MA.png')
+    },
+    MI: {
+        romanization: 'MI',
+        sound: '',
+        image: require('./images/MI.png')
+    },
+    MU: {
+        romanization: 'MU',
+        sound: '',
+        image: require('./images/MU.png')
+    },
+    ME: {
+        romanization: 'ME',
+        sound: '',
+        image: require('./images/ME.png')
+    },
+    MO: {
+        romanization: 'MO',
+        sound: '',
+        image: require('./images/MO.png')
+    },
+    RA: {
+        romanization: 'RA',
+        sound: '',
+        image: require('./images/RA.png')
+    },
+    RI: {
+        romanization: 'RI',
+        sound: '',
+        image: require('./images/RI.png')
+    },
+    RU: {
+        romanization: 'RU',
+        sound: '',
+        image: require('./images/RU.png')
+    },
+    RE: {
+        romanization: 'RE',
+        sound: '',
+        image: require('./images/RE.png')
+    },
+    RO: {
+        romanization: 'RO',
+        sound: '',
+        image: require('./images/RO.png')
+    },
+    YA: {
+        romanization: 'YA',
+        sound: '',
+        image: require('./images/YA.png')
+    },
+    YU: {
+        romanization: 'YU',
+        sound: '',
+        image: require('./images/YU.png')
+    },
+    YO: {
+        romanization: 'YO',
+        sound: '',
+        image: require('./images/YO.png')
+    },
+    WA: {
+        romanization: 'WA',
+        sound: '',
+        image: require('./images/WA.png')
+    },
+    O: {
+        romanization: 'O',
+        sound: '',
+        image: require('./images/O.png')
+    },
+    N: {
+        romanization: 'N',
+        sound: '',
+        image: require('./images/N.png')
     }
-
 }
 
 export default data;

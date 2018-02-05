@@ -8,12 +8,16 @@ import { FadeInView } from './common';
 import { targetUpdate, choicesUpdate, resetStreak } from '../actions/gameActions'; 
 
 class Play extends Component {
+    constructor(props){
+        super(props);
+        this.onQuit = this.onQuit.bind(this);
+    }
     componentWillMount() {
         this.props.choicesUpdate();
     }
     onQuit () {
         Actions.mainMenu();
-        resetStreak();
+        this.props.resetStreak();
     }
     render() {
         return (

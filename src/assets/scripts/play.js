@@ -3,7 +3,10 @@ export const generateChoices = () => {
     let choices = [];
     const selectedRange = [
         'A', 'I', 'U', 'E', 'O', 'KA', 'KI', 'KU', 'KE', 'KO',
-        'SA', 'SHI', 'SU', 'SE', 'SO', 'TA', 'CHI', 'TSU', 'TE', 'TO'
+        'SA', 'SHI', 'SU', 'SE', 'SO', 'TA', 'CHI', 'TSU', 'TE', 'TO',
+        'NA', 'NI', 'NU', 'NE', 'NO', 'HA', 'HI', 'FU', 'HE', 'HO',
+        'MA', 'MI', 'MU', 'ME', 'MO', 'RA', 'RI', 'RU', 'RE', 'RO',
+        'YA', 'YU', 'YO', 'WA', 'O', 'N'
     ];
     for (i = 0; i < 4; i++){
         let rand = Math.floor(Math.random() * selectedRange.length);

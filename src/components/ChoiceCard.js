@@ -34,6 +34,10 @@ class ChoiceCard extends Component {
         //Game over condition
         this.setState({
             modalVisible: true
+        }, () => {
+            setTimeout(() => {
+                this.props.choicesUpdate();
+            }, 500);   
         });
     }
     closeModal() {

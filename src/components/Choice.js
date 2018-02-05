@@ -11,4 +11,5 @@ const Choice = (props) => (
     </TouchableOpacity>
 );
 
+
 export default Choice;

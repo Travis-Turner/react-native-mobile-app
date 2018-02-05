@@ -6,7 +6,7 @@ import Play from './components/Play';
 const RouterComponent = () => {
     return (
         <Router>
-            <Scene key="root" hideNavBar duration={1}>
+            <Scene key="root" hideNavBar duration={1} {...mainConfig}>
                 <Scene key="menu" hideNavBar>
                     <Scene 
                         key="mainMenu"
@@ -15,7 +15,7 @@ const RouterComponent = () => {
                         duration={1}
                     />
                 </Scene>
-                <Scene key="game" hideNavBar>
+                <Scene key="game" hideNavBar {...gameConfig}>
                     <Scene 
                     key="play"
                     title="play"
@@ -27,5 +27,16 @@ const RouterComponent = () => {
         </Router>
     );
 };
+
+var mainConfig = {
+    cardStyle: {
+          backgroundColor: 'white'
+    }
+}
+var gameConfig = {
+    cardStyle: {
+        backgroundColor: '#F4F4F4'
+    }
+}
 
 export default RouterComponent;

@@ -37,10 +37,7 @@
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		A94720D32025BBD2005BC8C1 /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A94720D02025BB7A005BC8C1 /* libRNSound.a */; };
-		A94720DA2025C25F005BC8C1 /* hd_success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A94720D92025C25F005BC8C1 /* hd_success.mp3 */; };
-		A94720DB2025C25F005BC8C1 /* hd_success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A94720D92025C25F005BC8C1 /* hd_success.mp3 */; };
-		A94720DC2025C25F005BC8C1 /* hd_success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A94720D92025C25F005BC8C1 /* hd_success.mp3 */; };
-		A94720DD2025C25F005BC8C1 /* hd_success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A94720D92025C25F005BC8C1 /* hd_success.mp3 */; };
+		A9673C5B2026138300A32236 /* hd_success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9673C5A2026138200A32236 /* hd_success.mp3 */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 /* End PBXBuildFile section */
 
@@ -361,7 +358,7 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		A94720A52025BB7A005BC8C1 /* RNSound.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNSound.xcodeproj; path = "../node_modules/react-native-sound/RNSound.xcodeproj"; sourceTree = "<group>"; };
-		A94720D92025C25F005BC8C1 /* hd_success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hd_success.mp3; path = ../../../Desktop/hd_success.mp3; sourceTree = "<group>"; };
+		A9673C5A2026138200A32236 /* hd_success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hd_success.mp3; path = ../../../Desktop/hd_success.mp3; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -594,7 +591,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				A94720D92025C25F005BC8C1 /* hd_success.mp3 */,
+				A9673C5A2026138200A32236 /* hd_success.mp3 */,
 				13B07FAE1A68108700A75B9A /* hiragana_driller */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* hiragana_drillerTests */,
@@ -1097,7 +1094,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A94720DB2025C25F005BC8C1 /* hd_success.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1105,7 +1101,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A94720DA2025C25F005BC8C1 /* hd_success.mp3 in Resources */,
+				A9673C5B2026138300A32236 /* hd_success.mp3 in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
@@ -1115,7 +1111,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A94720DC2025C25F005BC8C1 /* hd_success.mp3 in Resources */,
 				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1124,7 +1119,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A94720DD2025C25F005BC8C1 /* hd_success.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
