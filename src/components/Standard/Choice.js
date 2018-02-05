@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
-import s from '../styles/ChoiceCard';
+import s from '../../styles/ChoiceCard';
 
 const Choice = (props) => (
     <TouchableOpacity 

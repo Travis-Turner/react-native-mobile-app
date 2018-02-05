@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { View, Image, StyleSheet } from 'react-native';
+import { AsyncStorage, View, Image, StyleSheet } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import Scoreboard from './Scoreboard';
 import { Button, Card, CardSection, Header } from './common';
-import { targetUpdate, choicesUpdate } from '../actions/gameActions'; 
+import { targetUpdate, choicesUpdate, setHiScore } from '../actions/gameActions'; 
 
 class MainMenu extends Component {
     componentWillMount() {
         this.props.targetUpdate();
         this.props.choicesUpdate();
+        try {
+            let hiScore = AsyncStorage.getItem('hi-score');
+            hiScore.then((value) => {
+                this.props.setHiScore(value);
+            })
+          } catch (error) {
+            
+          }
     }
     onPlayPress () {
         Actions.play();
@@ -29,7 +37,7 @@ class MainMenu extends Component {
                 </View>
                 <Card>
                     <CardSection>
-                        <Scoreboard hiScore={12} />
+                        <Scoreboard hiScore={this.props.hiScore} />
                     </CardSection>
                     <CardSection>
                         <Button onPress={this.onPlayPress.bind(this)}>
@@ -59,8 +67,9 @@ const styles = StyleSheet.create({
 const mapStateToProps = (state) => {
     return {
         targetChar: state.game.targetChar,
-        choices: state.game.choices
+        choices: state.game.choices,
+        hiScore: state.game.hiScore
     }
 }
 
-export default connect(mapStateToProps, { targetUpdate, choicesUpdate })(MainMenu);
+export default connect(mapStateToProps, { targetUpdate, choicesUpdate, setHiScore })(MainMenu);

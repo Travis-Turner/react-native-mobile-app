@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { View, Modal } from 'react-native';
-import { choicesUpdate, addStreak, resetStreak } from '../actions/gameActions';
-import data from '../assets/data';
-import s from '../styles/ChoiceCard';
+import { AsyncStorage, View, Modal } from 'react-native';
+import { choicesUpdate, addStreak, resetStreak } from '../../actions/gameActions';
+import data from '../../assets/data';
+import s from '../../styles/ChoiceCard';
 import Choice from './Choice';
-import VicModal from './VicModal';
+import VicModal from '../VicModal';
+
 let Sound = require('react-native-sound');
 var success = new Sound('hd_success.mp3', Sound.MAIN_BUNDLE, (error) => {
     if (error) {
-      console.log('failed to load the sound', error);
       return;
     }
-    console.log('duration in seconds: ' + success.getDuration() + 'number of channels: ' + success.getNumberOfChannels());
   });
 
 class ChoiceCard extends Component {
@@ -24,6 +23,15 @@ class ChoiceCard extends Component {
         this.handleChoice = this.handleChoice.bind(this);
         this.closeModal = this.closeModal.bind(this);
     }
+    updateHiScore() {
+        if (this.props.streak > this.props.hiScore){
+            try {
+                AsyncStorage.setItem('hi-score', this.props.streak.toString());
+              } catch (error) {
+                
+              }
+        }
+    }
     handleChoice(text) {
         if (text === this.props.targetChar){ 
             this.props.addStreak();
@@ -32,6 +40,9 @@ class ChoiceCard extends Component {
             return;
         }
         //Game over condition
+            //Beat high score condition
+        this.updateHiScore();
+      
         this.setState({
             modalVisible: true
         }, () => {
@@ -41,6 +52,7 @@ class ChoiceCard extends Component {
         });
     }
     closeModal() {
+        this.updateHiScore();
         this.setState({modalVisible:false});
         this.props.resetStreak();
       }
@@ -105,7 +117,8 @@ class ChoiceCard extends Component {
 const mapStateToProps = (state) => {
     return {
         randArr: state.game.randNums,
-        streak: state.game.streak
+        streak: state.game.streak,
+        hiScore: state.game.hiScore
     }
 }
 

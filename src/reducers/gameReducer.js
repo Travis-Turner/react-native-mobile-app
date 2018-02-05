@@ -2,7 +2,8 @@ import {
     TARGET_UPDATE,
     CHOICES_UPDATE,
     ADD_STREAK,
-    RESET_STREAK
+    RESET_STREAK,
+    SET_HIGH_SCORE
   } from '../actions/types';
   import { generateRandomArray } from '../assets/scripts/play';
   
@@ -10,7 +11,8 @@ import {
     targetChar: 'E',
     choices: [],
     randNums: [],
-    streak: 0
+    streak: 0,
+    hiScore: 0
   }
   
   export default (state = INITIAL_STATE, action) => {
@@ -35,6 +37,11 @@ import {
         return {
           ...state,
           streak: 0
+        }
+      case SET_HIGH_SCORE:
+        return {
+          ...state,
+          hiScore: action.payload
         }
       default:
         return state;
