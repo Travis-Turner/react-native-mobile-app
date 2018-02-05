@@ -14,6 +14,9 @@ class MainMenu extends Component {
     onPlayPress () {
         Actions.play();
     }
+    onReferencePress() {
+        Actions.reference();
+    }
     render() {
         return (
             <View>
@@ -34,7 +37,7 @@ class MainMenu extends Component {
                         </Button>
                     </CardSection>
                     <CardSection>
-                        <Button>TRAIN</Button>
+                        <Button onPress={this.onReferencePress.bind(this)}>TRAIN</Button>
                     </CardSection>
                 </Card>
             </View>

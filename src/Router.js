@@ -2,6 +2,7 @@ import React from 'react';
 import { Scene, Router } from 'react-native-router-flux';
 import MainMenu from './components/MainMenu';
 import Play from './components/Play';
+import Reference from './components/Reference';
 
 const RouterComponent = () => {
     return (
@@ -19,8 +20,14 @@ const RouterComponent = () => {
                     <Scene 
                     key="play"
                     title="play"
-                    component={Play}
-                    
+                    component={Play}  
+                    />
+                </Scene>
+                <Scene key="other" hideNavBar {...gameConfig}>
+                    <Scene 
+                        key="reference"
+                        title="reference"
+                        component={Reference}
                     />
                 </Scene>
             </Scene>
