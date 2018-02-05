@@ -6,7 +6,7 @@ const aspectRatio = height/width;
 const styles = StyleSheet.create({
     mainContainer: {
         alignItems: 'center',
-        marginTop: aspectRatio < 1.6 ? 10 : 40
+        marginTop: aspectRatio < 1.6 ? 10 : 5
     },
     text: {
         fontSize: aspectRatio < 1.6 ? 20 : 34,

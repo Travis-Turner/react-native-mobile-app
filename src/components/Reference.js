@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image, FlatList } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image, FlatList, Dimensions } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { Button, CardSection } from './common';
 import { referenceData } from '../assets/data';
+const { width, height } = Dimensions.get('window');
+const aspectRatio = height/width;
 
 class Reference extends Component {
     handleButton() {
@@ -55,7 +57,7 @@ const styles = StyleSheet.create({
         color: 'black'
     },
     image: {
-        width: 200,
+        width: '50%',
         height: 200
     },
     itemContainer: {
@@ -72,8 +74,8 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     itemText: {
-        marginTop: 40,
-        fontSize: 95,
+        marginTop: aspectRatio < 1.6 ? 60 : 40,
+        fontSize: aspectRatio < 1.6 ? 50 : 60,
         alignItems: 'center'
     },
     list: {
